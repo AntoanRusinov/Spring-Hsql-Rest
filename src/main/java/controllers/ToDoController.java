@@ -23,6 +23,7 @@ public class ToDoController {
 
 	public ToDoService toDoService;
 
+	// just for test
 	@RequestMapping(value = "/ping", method = RequestMethod.GET)
 	@ResponseBody
 	public String showIndex() {
