@@ -26,6 +26,7 @@ public class UsersContoller {
 
 	public UsersService usersServce;
 
+	//just for test
 	@RequestMapping(value = "/ping", method = RequestMethod.GET)
 	@ResponseBody
 	public String showIndex() {
