@@ -53,5 +53,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     	public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
         	configurer.favorPathExtension(false).favorParameter(true);
     	}
+    	
+    	@Override
+    	public void configureViewResolvers(ViewResolverRegistry registry) {
+        	registry.enableContentNegotiation(new MappingJackson2JsonView());
+        	registry.jsp();
+    }
 
 }
