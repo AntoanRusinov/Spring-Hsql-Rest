@@ -48,5 +48,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	public JsonExceptionResolver jsonExceptionResolver() {
 		return new JsonExceptionResolver();
 	}
+	
+	@Override
+    	public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+        	configurer.favorPathExtension(false).favorParameter(true);
+    	}
 
 }
